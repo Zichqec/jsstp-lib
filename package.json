@@ -1,22 +1,25 @@
 {
 	"name": "jsstp",
-	"version": "2.0.1",
+	"version": "2.1.7",
 	"description": "Use js to communicate with ukagaka in js to exchange information.",
 	"main": "src/jsstp.mjs",
+	"types": "src/jsstp.d.ts",
 	"directories": {
 		"doc": "docs"
 	},
 	"scripts": {
 		"test": "npm run test:unit && npm run test:browser",
-		"test:unit": "node tests/unit.mjs",
-		"test:browser": "node tests/browser.mjs"
+		"test:unit": "node dev/tests/unit.mjs",
+		"test:browser": "node dev/tests/browser.mjs",
+		"build": "node dev/build/build.mjs"
 	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/ukatech/jsstp-lib.git"
 	},
 	"keywords": [
-		"ukagaka","sstp"
+		"ukagaka",
+		"sstp"
 	],
 	"author": "steve02081504",
 	"license": "SEE LICENSE IN <LICENSE>",
@@ -26,11 +29,12 @@
 	"homepage": "https://github.com/ukatech/jsstp-lib#readme",
 	"devDependencies": {
 		"rollup": "^3.25.1",
+		"rollup-plugin-dts": "^5.3.0",
+		"terser": "^5.18.2",
 		"uglify-js": "^3.17.4"
 	},
-	"files":[
+	"files": [
 		"docs",
-		"src",
-		"tests"
+		"src"
 	]
 }
